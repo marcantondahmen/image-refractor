@@ -2,7 +2,7 @@
 
 A canvas-based web-component for applying animated water-like refraction effects to images.
 
-![](assets/readme.png)
+[![](assets/readme.png)](https://marcantondahmen.github.io/image-refractor/)
 
 :wave: [Check out the demo](https://marcantondahmen.github.io/image-refractor/)
 
