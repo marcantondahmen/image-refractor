@@ -6,8 +6,9 @@ export class RefractorPresetComponent extends HTMLElement {
 	connectedCallback(): void {
 		const speed = this.getAttribute('speed') || '0.05';
 		const intensity = this.getAttribute('intensity') || '1.0';
+		const refract = this.getAttribute('refract') || '1.333';
 
-		this.textContent = `${intensity}/${speed}`;
+		this.textContent = `${intensity} / ${speed} / ${refract}`;
 
 		this.addEventListener('click', (event: Event) => {
 			const button = event.target;
@@ -23,10 +24,10 @@ export class RefractorPresetComponent extends HTMLElement {
 
 			updated.setAttribute('width', current.getAttribute('width'));
 			updated.setAttribute('height', current.getAttribute('height'));
-			updated.setAttribute('refract', current.getAttribute('refract'));
 			updated.setAttribute('src', current.getAttribute('src'));
 			updated.setAttribute('speed', speed);
 			updated.setAttribute('intensity', intensity);
+			updated.setAttribute('refract', refract);
 
 			current.replaceWith(updated);
 		});

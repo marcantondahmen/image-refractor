@@ -32,8 +32,8 @@
 				width="1000"
 				height="1000"
 				refract="1.333"
-				speed="0.03"
-				intensity="1.0"
+				speed="0.05"
+				intensity="1"
 				src="assets/demo.png"
 			></image-refractor>
 			<main>
@@ -46,28 +46,63 @@
 						Open Documentation ⟶
 					</a>
 				</p>
-				<div>
-					<label>Intensity & Speed</label>
-					<div class="presets">
-						<refractor-preset
-							class="active"
-							intensity="1.0"
-							speed="0.03"
-						></refractor-preset>
-						<refractor-preset
-							intensity="3.0"
-							speed="0.08"
-						></refractor-preset>
-						<refractor-preset
-							intensity="9.0"
-							speed="0.4"
-						></refractor-preset>
-						<refractor-preset
-							intensity="15.0"
-							speed="0.12"
-						></refractor-preset>
+				<details open>
+					<summary>Settings</summary>
+					<div>
+						<div class="presets">
+							<label>
+								Example Presets:
+								<br />
+								Intensity / Speed / Refraction
+							</label>
+							<refractor-preset
+								class="active"
+								intensity="1"
+								speed="0.05"
+								refract="1.333"
+							></refractor-preset>
+							<refractor-preset
+								speed="0.6"
+								refract="1.07"
+								intensity="2"
+							></refractor-preset>
+							<refractor-preset
+								speed="0.3"
+								refract="1.005"
+								intensity="4"
+							></refractor-preset>
+							<refractor-preset
+								intensity="6"
+								speed="0.4"
+								refract="1.05"
+							></refractor-preset>
+							<refractor-preset
+								intensity="12"
+								speed="0.8"
+								refract="1.85"
+							></refractor-preset>
+							<refractor-preset
+								intensity="0"
+								speed="0"
+								refract="1"
+							></refractor-preset>
+						</div>
+						<div class="presets">
+							<label>Texture</label>
+							<swap-image src="assets/demo.png"
+								>Default</swap-image
+							>
+							<swap-image
+								src="https://source.unsplash.com/nCdBlbqlj4E/800x800"
+								>Abstract</swap-image
+							>
+							<swap-image
+								src="https://source.unsplash.com/Jzf8cyxg76g/800x800"
+								>Ring</swap-image
+							>
+						</div>
 					</div>
-				</div>
+				</details>
 			</main>
 		</div>
 		<a

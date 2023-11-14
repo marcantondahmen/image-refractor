@@ -28,6 +28,7 @@ body {
 	font-family: 'Inter';
 	font-size: 18px;
 	font-weight: 540;
+	line-height: 1.45;
 
 	@media (max-width: 500px) {
 		font-size: 16px;
@@ -47,20 +48,17 @@ canvas {
 }
 
 image-refractor {
-	width: 100vmin;
-	height: 100vmin;
-
-	@media (max-width: 500px) {
-		width: 120vmin;
-		height: 120vmin;
-	}
+	width: 94vmin;
+	height: 94vmin;
+	border-radius: 15px;
+	overflow: hidden;
 }
 
 main {
 	position: absolute;
 	display: flex;
 	flex-direction: column;
-	gap: 1rem;
+	gap: 2rem;
 	inset: 0;
 	padding: 1.7rem 2rem;
 }
@@ -73,9 +71,13 @@ h1 {
 	margin: 0;
 	margin-left: -2px;
 	font-size: 2.65rem;
-	font-weight: 780;
+	font-weight: 760;
 	letter-spacing: -0.035em;
 	line-height: 1;
+}
+
+p {
+	margin: 0;
 }
 
 a {
@@ -88,30 +90,49 @@ a {
 	}
 }
 
+summary {
+	cursor: pointer;
+}
+
+details > div {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin-top: 2rem;
+}
+
 label {
-	color: @muted;
+	margin-bottom: 0.5rem;
 }
 
 .presets {
 	display: flex;
-	gap: 0.5rem;
-	margin-top: 0.3rem;
+	flex-direction: column;
+	align-items: start;
 }
 
+swap-image,
 refractor-preset {
 	color: @muted;
 	cursor: pointer;
 	transition: color 0.2s;
 
+	&:before {
+		content: '○';
+		padding-right: 0.5em;
+	}
+
 	&.active {
-		text-decoration: underline;
-		text-underline-offset: 4px;
 		color: #ffffff;
+
+		&:before {
+			content: '●';
+		}
 	}
 }
 
 .github {
 	position: fixed;
-	top: 1.8rem;
-	right: 1.8rem;
+	top: 2rem;
+	right: 2rem;
 }
