@@ -2,6 +2,10 @@
 import GlslCanvas from 'glslCanvas/src/GlslCanvas.js';
 import { fbm } from '../fbm';
 
+const floatString = (str: string): string => {
+	return str.includes('.') ? str : `${str}.0`;
+};
+
 /**
  * A wrapper web-component for a modified version
  * of a shader described in this great video:
@@ -16,9 +20,9 @@ export class ImageRefractorComponent extends HTMLElement {
 		const canvas = document.createElement('canvas');
 		const width = this.getAttribute('width') || '1000';
 		const height = this.getAttribute('height') || '1000';
-		const refract = this.getAttribute('refract') || '1.333';
-		const speed = this.getAttribute('speed') || '0.05';
-		const intensity = this.getAttribute('intensity') || '1.0';
+		const refract = floatString(this.getAttribute('refract')) || '1.333';
+		const speed = floatString(this.getAttribute('speed')) || '0.05';
+		const intensity = floatString(this.getAttribute('intensity')) || '1.0';
 
 		this.style.display = 'block';
 
@@ -46,8 +50,8 @@ export class ImageRefractorComponent extends HTMLElement {
 				vec2 uv = v_texcoord;
 
 				vec2 surface = vec2(
-					mix(-0.3, 0.3, fbm(${intensity} * uv + ${speed} * u_time)),
-					mix(-0.3, 0.3, fbm(${intensity} * uv + ${speed} * u_time))
+					mix(-0.2, 0.2, fbm(${intensity} * uv + ${speed} * u_time)),
+					mix(-0.2, 0.2, fbm(${intensity} * uv + ${speed} * u_time))
 				);
 			
 				uv += refract(vec2(0.0, 0.0), surface, 1.0 / ${refract});
