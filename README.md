@@ -61,6 +61,8 @@ The component can be configured using the following attributes:
 | `speed`     | The animation speed. Good values are between `0.01` and `0.1`.                                        |
 | `intensity` | The intensity of the underlaying noise. Higher values generate higher distortion.                     |
 
+Check out the [source](demo/index.html#L31) of the demo page for some configuration examples.
+
 ## Acknowledgements
 
 Thanks to **SuperHi** for the great inspiration [video](https://www.youtube.com/watch?v=GALjY57ntsk) and
