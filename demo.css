@@ -249,6 +249,7 @@ body {
   font-family: 'Inter';
   font-size: 18px;
   font-weight: 540;
+  line-height: 1.45;
 }
 @media (max-width: 500px) {
   html,
@@ -267,20 +268,16 @@ canvas {
   height: 100vh;
 }
 image-refractor {
-  width: 100vmin;
-  height: 100vmin;
-}
-@media (max-width: 500px) {
-  image-refractor {
-    width: 120vmin;
-    height: 120vmin;
-  }
+  width: 94vmin;
+  height: 94vmin;
+  border-radius: 15px;
+  overflow: hidden;
 }
 main {
   position: absolute;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
   inset: 0;
   padding: 1.7rem 2rem;
 }
@@ -291,9 +288,12 @@ h1 {
   margin: 0;
   margin-left: -2px;
   font-size: 2.65rem;
-  font-weight: 780;
+  font-weight: 760;
   letter-spacing: -0.035em;
   line-height: 1;
+}
+p {
+  margin: 0;
 }
 a {
   color: inherit;
@@ -303,27 +303,45 @@ a {
 a:hover {
   color: hsl(215, 12%, 30%);
 }
+summary {
+  cursor: pointer;
+}
+details > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
 label {
-  color: hsl(215, 12%, 30%);
+  margin-bottom: 0.5rem;
 }
 .presets {
   display: flex;
-  gap: 0.5rem;
-  margin-top: 0.3rem;
+  flex-direction: column;
+  align-items: start;
 }
+swap-image,
 refractor-preset {
   color: hsl(215, 12%, 30%);
   cursor: pointer;
   transition: color 0.2s;
 }
+swap-image:before,
+refractor-preset:before {
+  content: '○';
+  padding-right: 0.5em;
+}
+swap-image.active,
 refractor-preset.active {
-  text-decoration: underline;
-  text-underline-offset: 4px;
   color: #ffffff;
+}
+swap-image.active:before,
+refractor-preset.active:before {
+  content: '●';
 }
 .github {
   position: fixed;
-  top: 1.8rem;
-  right: 1.8rem;
+  top: 2rem;
+  right: 2rem;
 }
 
