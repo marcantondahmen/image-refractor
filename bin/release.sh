@@ -6,8 +6,6 @@ if [[ $(git status -s) ]]; then
 	echo
 fi
 
-ps | grep "webpack" | grep -v grep | awk '{print $1}' | xargs kill
-
 echo "Choose type of release:"
 echo
 echo "  1) Patch (default)"
