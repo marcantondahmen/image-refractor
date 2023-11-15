@@ -25,22 +25,22 @@
 			property="og:image"
 			content="https://raw.githubusercontent.com/marcantondahmen/image-refractor/master/assets/readme.png"
 		/>
-	<link rel="icon" href="favicon.svg?398d4f2fd0a78e0b0926"><script defer src="demo.js?398d4f2fd0a78e0b0926"></script><link href="demo.css?398d4f2fd0a78e0b0926" rel="stylesheet"></head>
+	<link rel="icon" href="favicon.svg?a383f9d2b38ce9479fb5"><script defer src="demo.js?a383f9d2b38ce9479fb5"></script><link href="demo.css?a383f9d2b38ce9479fb5" rel="stylesheet"></head>
 	<body>
 		<div class="wrapper">
 			<image-refractor
-				width="1000"
-				height="1000"
-				refract="1.333"
-				speed="0.05"
+				width="1800"
+				height="1800"
+				refract="1.33"
+				speed=".04"
 				intensity="1"
-				src="assets/demo.png"
+				src="assets/rocks.jpg"
 			></image-refractor>
 			<main>
 				<h1>Image<br />Refractor</h1>
 				<p>
 					<a
-						href="https://github.com/marcantondahmen/image-refractor"
+						href="https://github.com/marcantondahmen/image-refractor#readme"
 						target="_blank"
 					>
 						Open Documentation ⟶
@@ -50,55 +50,45 @@
 					<summary>Settings</summary>
 					<div>
 						<div class="presets">
-							<label>
-								Example Presets:
-								<br />
-								Intensity / Speed / Refraction
-							</label>
+							<label>Intensity / Speed / Refraction</label>
 							<refractor-preset
 								class="active"
+								speed=".04"
+								refract="1.33"
 								intensity="1"
-								speed="0.05"
-								refract="1.333"
 							></refractor-preset>
 							<refractor-preset
-								speed="0.6"
+								speed=".1"
+								refract="1.004"
+								intensity="7.5"
+							></refractor-preset>
+							<refractor-preset
+								speed=".03"
 								refract="1.07"
+								intensity="14"
+							></refractor-preset>
+							<refractor-preset
 								intensity="2"
+								speed=".5"
+								refract="1.15"
 							></refractor-preset>
 							<refractor-preset
-								speed="0.3"
-								refract="1.005"
-								intensity="4"
-							></refractor-preset>
-							<refractor-preset
-								intensity="6"
-								speed="0.4"
-								refract="1.05"
-							></refractor-preset>
-							<refractor-preset
-								intensity="12"
-								speed="0.8"
+								intensity="4.2"
+								speed=".008"
 								refract="1.85"
-							></refractor-preset>
-							<refractor-preset
-								intensity="0"
-								speed="0"
-								refract="1"
 							></refractor-preset>
 						</div>
 						<div class="presets">
 							<label>Texture</label>
+							<swap-image src="assets/rocks.jpg" class="active"
+								>Rocks</swap-image
+							>
+							<swap-image src="assets/ring.jpg">Ring</swap-image>
+							<swap-image src="assets/mountains.jpg"
+								>Mountains</swap-image
+							>
 							<swap-image src="assets/demo.png"
-								>Default</swap-image
-							>
-							<swap-image
-								src="https://source.unsplash.com/nCdBlbqlj4E/800x800"
-								>Abstract</swap-image
-							>
-							<swap-image
-								src="https://source.unsplash.com/Jzf8cyxg76g/800x800"
-								>Ring</swap-image
+								>Circles</swap-image
 							>
 						</div>
 					</div>
