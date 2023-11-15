@@ -3,7 +3,7 @@ const fs = require('fs');
 const assets = './dist/assets';
 
 const GITHUB =
-	'https://github.com/marcantondahmen/image-refractor/tree/gh-pages/assets';
+	'https://raw.githubusercontent.com/marcantondahmen/image-refractor/gh-pages/assets';
 
 const download = async (url, name) => {
 	const response = await fetch(url);
