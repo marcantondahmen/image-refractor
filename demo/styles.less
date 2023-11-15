@@ -67,6 +67,7 @@ main {
 }
 
 main * {
+	-webkit-user-select: none;
 	user-select: none;
 }
 
@@ -98,6 +99,11 @@ summary {
 	display: inline-flex;
 	align-items: center;
 	cursor: pointer;
+	list-style: none;
+
+	&::-webkit-details-marker {
+		display: none;
+	}
 
 	&:before {
 		content: '';
