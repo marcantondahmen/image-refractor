@@ -286,6 +286,7 @@ main {
   backdrop-filter: blur(20px);
 }
 main * {
+  -webkit-user-select: none;
   user-select: none;
 }
 h1 {
@@ -312,6 +313,10 @@ summary {
   display: inline-flex;
   align-items: center;
   cursor: pointer;
+  list-style: none;
+}
+summary::-webkit-details-marker {
+  display: none;
 }
 summary:before {
   content: '';
