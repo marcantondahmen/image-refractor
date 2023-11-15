@@ -15,7 +15,7 @@ with `npm` and import it into your JavaScript or TypeScript project or use it in
 
 Install with `npm`:
 
-```
+```bash
 npm i --save image-refractor
 ```
 
