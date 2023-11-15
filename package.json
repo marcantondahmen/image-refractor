@@ -1,6 +1,6 @@
 {
   "name": "image-refractor",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A canvas-based web-component for applying webgl refaction shader effects to images",
   "main": "dist/image-refractor.js",
   "types": "types/index.d.ts",
